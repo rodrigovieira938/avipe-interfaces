@@ -11,7 +11,7 @@ import (
 
 type Framework struct {
 	main_router mux.Router
-	api_router  *mux.Router
+	api_router  ApiRouter
 	apps        []app.Application
 }
 
@@ -19,16 +19,8 @@ func (framework *Framework) initialize_router() {
 	framework.main_router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello, World!")
 	}).Methods("GET")
-	framework.api_router.HandleFunc("/version", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "API Version 1.0")
-	}).Methods("GET")
-	for _, application := range framework.apps {
-		slog.Info("Registering application", "app", application.Name())
-		// Change to use a subrouter for each application
-		framework.api_router.HandleFunc("/"+application.Name(), func(w http.ResponseWriter, r *http.Request) {
-			fmt.Fprintf(w, "Hello from %s!", application.Name())
-		}).Methods("GET")
-	}
+
+	framework.api_router = CreateApiRouter(framework)
 }
 
 func (framework *Framework) Initialize() {
@@ -43,8 +35,8 @@ func (framework *Framework) Run() {
 func CreateFramework(apps []app.Application) Framework {
 	main_router := mux.Router{}
 	framework := Framework{
+		//Only initialize required fields
 		main_router: main_router,
-		api_router:  main_router.PathPrefix("/api").Subrouter(),
 		apps:        apps,
 	}
 	framework.Initialize()
