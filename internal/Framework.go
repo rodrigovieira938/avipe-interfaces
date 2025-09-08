@@ -23,7 +23,7 @@ func (framework *Framework) initialize_router() {
 		fmt.Fprint(w, "API Version 1.0")
 	}).Methods("GET")
 	for _, application := range framework.apps {
-		fmt.Printf("Registering application: %s\n", application.Name())
+		slog.Info("Registering application", "app", application.Name())
 		// Change to use a subrouter for each application
 		framework.api_router.HandleFunc("/"+application.Name(), func(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "Hello from %s!", application.Name())
