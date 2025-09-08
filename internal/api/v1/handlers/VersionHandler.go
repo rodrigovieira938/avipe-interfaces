@@ -10,6 +10,16 @@ import (
 )
 
 type VersionHandler struct {
+	response v1.VersionResponse
+}
+
+func CreateVersionHandler(version string, supportedVersions []string) *VersionHandler {
+	return &VersionHandler{
+		response: v1.VersionResponse{
+			Version:           version,
+			SupportedVersions: supportedVersions,
+		},
+	}
 }
 
 func (vh *VersionHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
