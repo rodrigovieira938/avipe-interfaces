@@ -32,6 +32,10 @@ func (framework *Framework) Run() {
 	http.ListenAndServe(":8080", &framework.main_router)
 }
 
+func (framework *Framework) GetApps() []app.Application {
+	return framework.apps
+}
+
 func CreateFramework(apps []app.Application) Framework {
 	main_router := mux.Router{}
 	framework := Framework{
