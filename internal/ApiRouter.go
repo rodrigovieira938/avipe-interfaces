@@ -16,11 +16,9 @@ func (r ApiRouter) initV1Routes(framework *Framework) {
 
 	v1_router := r.r.PathPrefix("/v1").Subrouter()
 	v1_router.Handle("/apps", handlers.CreateApplicationsHandler(framework.GetApps())).Methods("GET")
-
 	for _, application := range framework.apps {
 		slog.Info("Registering application", "app", application.Name())
-		app_router := v1_router.PathPrefix("/" + application.Name()).Subrouter()
-		application.InitializeRoutes(app_router)
+		application.InitializeRoutes(v1_router)
 	}
 }
 
