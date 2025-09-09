@@ -1,0 +1,29 @@
+package mainpage
+import (
+	"github.com/rodrigovieira938/avipe-interfaces/pkg/app"
+)
+	
+
+templ MainPage(apps []app.Application) {
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AVIPE</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.js" integrity="sha384-yWakaGAFicqusuwOYEmoRjLNOC+6OFsdmwC2lbGQaRELtuVEqNzt11c2J711DeCZ" crossorigin="anonymous"></script>
+	</head>
+	<body class="flex h-screen w-screen">
+		<aside class="flex flex-col gap-4 bg-slate-800 text-white px-4 py-8">
+			for _, app := range apps {
+				<div>
+					<button hx-on="click" hx-get={"api/v1/"+app.Name()+"/interface"} hx-target="main">{app.Name()}</button>
+				</div>
+			}
+		</aside>
+		<main>
+		</main>
+	</body>
+	</html>
+}
