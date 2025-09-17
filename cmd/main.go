@@ -9,6 +9,7 @@ import (
 func main() {
 	apps := []app.Application{
 		applications.CreateExampleApp(),
+		applications.CreateMetereologicalStationApp(),
 	}
 	app := internal.CreateFramework(apps)
 	app.Run()
