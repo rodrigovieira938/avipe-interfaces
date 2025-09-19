@@ -18,7 +18,7 @@ templ MainPage(apps []app.Application) {
 		<aside class="flex flex-col gap-4 bg-slate-800 text-white px-4 py-8">
 			for _, app := range apps {
 				<div >
-					<button hx-on="click" hx-get={"api/v1/"+app.Name()+"/interface"} hx-target="main">{app.Name()}</button>
+					<button hx-on="click" hx-get={"api/v1/"+app.Name()+"/interface"} hx-target="main" hx-swap="outerHTML">{app.Name()}</button>
 				</div>
 			}
 		</aside>

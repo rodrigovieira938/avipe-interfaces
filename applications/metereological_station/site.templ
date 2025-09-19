@@ -1,38 +1,23 @@
 package metereological_station
 
 templ MainPage() {
-    <main class="flex-1 h-screen w-screen bg-slate-500 text-white ">
+    <main class="flex-1 flex-auto bg-slate-500 text-white ">
         <div class="text-white bg-slate-800">
             <div class="flex"> 
                 <h1 class="py-7 px-10">Metereological App</h1>
             </div>
-
-            <div class="bg-slate-600 text-center text-xl h-1/3">Estação 1
-                <div class="bg-slate-400 text-center">
-                    <div>Temperatura</div>
-                    <div>Humidade de solo</div>
-                    <div>Humidade relativa do ar</div>
-                    <div>Velocidade do vento</div>
+            <div class="m-4 grid gap-4 sm:grid-cols-2 text-center text-xl h-1/3">
+                <div class="min-h-[100px] rounded-lg  shadow text-center">
+                    <div>Estação 1</div>
+                    <div>Temperaturas min med max</div>
+                    <div>Humidade relativa min med max</div>
+                    <div>Direção do vento </div>
+                    <div>Velociadade do vento </div>
+                    <div>Percepitiação </div>
+                    <div>Nº horas de folha molhada</div>
                 </div>
             </div>
-
-            <div class="bg-slate-600 text-center text-xl h-1/3">Estação 2
-                <div class="bg-slate-400 text-center">
-                    <div>Temperatura</div>
-                    <div>Humidade de solo</div>
-                    <div>Humidade relativa do ar</div>
-                    <div>Velocidade do vento</div>
-                </div>    
-            </div>
-
-            <div class="bg-slate-600 text-center text-xl h-1/3">Estação 3
-                <div class="bg-slate-400 text-center">
-                    <div>Temperatura</div>
-                    <div>Humidade de solo</div>
-                    <div>Humidade relativa do ar</div>
-                    <div>Velocidade do vento</div>
-                </div>
-            </div>
-        </div>   
+        </div>
     </main>
 }
+
