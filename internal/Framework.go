@@ -21,6 +21,9 @@ func (framework *Framework) initialize_router() {
 	framework.mainpage = mainpage.MainPage(framework.apps)
 	framework.main_router.Handle("/", templ.Handler(framework.mainpage))
 
+	framework.main_router.PathPrefix("/static/").
+        Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
+
 	framework.api_router = CreateApiRouter(framework)
 }
 

@@ -9,10 +9,10 @@ templ MainPage() {
                 <h1 class=" text-2xl py-7 px-10">Metereological App</h1>
             </div>
             <div class='grid grid-cols-3 gap-x-2 gap-y-4 grid-flow-row-dense px-8'>
-        <div class='rounded-lg shadow-xl min-h-[100px] row-span-6 bg-fixed'
-             style="background-image: url('/resourses/uvas.jpeg'); w-[500px] h-[500px] bg-cover bg-center">
+        <div class='rounded-lg shadow-xl min-h-[100px] row-span-6 bg-cover bg-center '
+             style="background-image: url('./static/resources/uva3.jpeg'); ">
             <div class="p-8 font-bold text-2xl ">Estação 1</div>
-                <div class="p-5">Temperaturas min med max</div>
+                <div class="p-5 bg-cover bg-center">Temperaturas min med max</div>
                 <div class="p-5">Humidade relativa min med max</div>
                 <div class="p-5">Direção do vento </div>
                 <div class="p-5">Velociadade do vento </div>
@@ -20,12 +20,18 @@ templ MainPage() {
                 <div class="p-5">Nº horas de folha molhada</div>
                 <div class="p-3"></div>
         </div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2'></div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[80px]'></div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[50px]'></div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] row-span-3'></div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] row-span-3'></div>
-                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2'></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2 bg-cover bg-center'
+                style="background-image: url('./static/resources/montanhas.jpeg');"></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
+                style="background-image: url('./static/resources/chuva.jpeg');"></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
+                style="background-image: url('./static/resources/folha_molhada.jpeg');"></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
+                style="background-image: url('./static/resources/vento.jpeg');"></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
+                style="background-image: url('./static/resources/direcao_vento.jpeg');"></div>
+                <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2 bg-cover bg-center'
+                style="background-image: url('./static/resources/precipitacao.jpeg');"></div>
             </div>
         </div>
     </main>

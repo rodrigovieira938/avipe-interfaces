@@ -15,7 +15,7 @@ type MetereologicalStationApp struct {
 func (app *MetereologicalStationApp) Name() string {
 	return "MetereologicalStationApp"
 }
-func (app *MetereologicalStationApp) InitializeRoutes(r *mux.Router) {
+func (app *MetereologicalStationApp) InitializeRoutes(r *mux.Router ) {
 	subr := r.PathPrefix("/MetereologicalStationApp").Subrouter()
 	fmt.Println("Initializing routes for Metereological Station App")
 	subr.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
