@@ -6,30 +6,80 @@ templ MainPage() {
             <div class="flex"> 
                 <h1 class=" text-2xl py-7 px-10">Metereological App</h1>
             </div>
+
             <div class='grid grid-cols-3 gap-x-2 gap-y-4 grid-flow-row-dense px-8'>
-        <div class='rounded-lg shadow-xl min-h-[100px] row-span-6 bg-cover bg-center '
-             style="background-image: url('./static/resources/uva3.jpeg'); ">
-            <div class="p-8 font-bold text-2xl ">Estação 1</div>
-                <div class="p-5 bg-cover bg-center">Temperaturas min med max</div>
-                <div class="p-5">Humidade relativa min med max</div>
-                <div class="p-5">Direção do vento </div>
-                <div class="p-5">Velociadade do vento </div>
-                <div class="p-5">Percepitiação </div>
-                <div class="p-5">Nº horas de folha molhada</div>
-                <div class="p-3"></div>
-        </div>
+                <div class='rounded-lg shadow-xl min-h-[100px] row-span-6 bg-cover bg-center'
+                     style="background-image: url('./static/resources/uva3.jpeg'); ">
+                    <div class="p-6 font-bold text-2xl">Estação 1</div>
+                    <div class="p-4 bg-cover bg-center">Temperaturas min med max</div>
+                    <div class="p-4">Humidade relativa min med max</div>
+                    <div class="p-4">Direção do vento </div>
+                    <div class="p-4">Velociadade do vento </div>
+                    <div class="p-4">Percepitiação </div>
+                    <div class="p-4">Nº horas de folha molhada</div>
+                    <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto mr-2 mb-1"
+                    style="background-image: url('./static/icons/right-arrow-icon.png') ;cursor: pointer;" hx-get="/api/v1/OutraPágina/interface" hx-target="main" hx-swap="outerHTML"></div>
+                </div>
+
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2 bg-cover bg-center'
-                style="background-image: url('./static/resources/montanhas.jpeg');"></div>
+                     style="background-image: url('./static/resources/montanhas.jpeg');">
+                    <div class="text-center font-bold">TEMPERATURAS</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/temperatura.png');">
+                     </div>
+                </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
-                style="background-image: url('./static/resources/chuva.jpeg');"></div>
+                     style="background-image: url('./static/resources/chuva.jpeg');">
+                     <div class="text-center font-bold">PRECIPITAÇÃO</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/chuva.png');">
+                     </div>
+                </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
-                style="background-image: url('./static/resources/folha_molhada.jpeg');"></div>
+                     style="background-image: url('./static/resources/folha_molhada.jpeg');">
+                     <div class="text-center font-bold">FOLHA MOLHADA</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/folha.png');">
+                     </div>
+                </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
-                style="background-image: url('./static/resources/vento.jpeg');"></div>
+                     style="background-image: url('./static/resources/vento.jpeg');">
+                     <div class="text-center font-bold">VELOCIDADE DO VENTO</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/vento.png');">
+                     </div>
+                </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
-                style="background-image: url('./static/resources/direcao_vento.jpeg');"></div>
+                     style="background-image: url('./static/resources/direcao_vento.jpeg');">
+                     <div class="text-center font-bold">DIREÇÃO DO VENTO</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/direcao.png');">
+                     </div>
+                </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2 bg-cover bg-center'
-                style="background-image: url('./static/resources/precipitacao.jpeg');"></div>
+                     style="background-image: url('./static/resources/precipitacao.jpeg');">
+                     <div class="text-center font-bold">HUMIDADE RELATIVA</div>
+                      <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
+                      style=" background-image: url('./static/icons/humidade.png');">
+                     </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-2 gap-y-4 grid-flow-row-dense px-8 pt-7">
+                <div class="rounded-lg shadow-xl min-h-[250px] row-span-6 bg-cover bg-center flex items-center justify-left">
+                    <div class="flex flex-col items-center justify-left space-y-4 bg-gray-800 p-4 rounded-lg ml-15">
+                        <div class="w-12 h-12 rounded-full bg-green-500"></div>
+                        <div class="w-12 h-12 rounded-full bg-yellow-500"></div>
+                        <div class="w-12 h-12 rounded-full bg-red-500"></div>
+                    </div>
+                </div>
+                <div class="rounded-lg shadow-xl min-h-[250px] row-span-6 bg-cover bg-center flex items-center justify-left">
+                    <div class="flex flex-col items-center justify-left space-y-4 bg-gray-800 p-4 rounded-lg ml-15">
+                        <div class="w-12 h-12 rounded-full bg-green-500"></div>
+                        <div class="w-12 h-12 rounded-full bg-yellow-500"></div>
+                        <div class="w-12 h-12 rounded-full bg-red-500"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
