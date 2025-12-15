@@ -21,8 +21,12 @@ func (app *MetereologicalStationApp) InitializeRoutes(r *mux.Router ) {
 	subr.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello, World from Metereological Station App!")
 	}).Methods("GET")
+
 	subr.Handle("/interface", templ.Handler(MainPage())).Methods("GET")
 
+	subr.Handle("/estacao-b/interface", templ.Handler(MainPageB())).Methods("GET")
+
+	subr.Handle("/estacao-c/interface", templ.Handler(MainPageC())).Methods("GET")
 }
 
 func CreateMetereologicalStationApp() app.Application {

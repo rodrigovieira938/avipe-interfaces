@@ -1,6 +1,6 @@
 package metereological_station
 
-templ MainPage() {
+templ MainPageC() {
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.js" integrity="sha384-yWakaGAFicqusuwOYEmoRjLNOC+6OFsdmwC2lbGQaRELtuVEqNzt11c2J711DeCZ" crossorigin="anonymous"></script>
     <main class="flex-1 flex-auto bg-slate-500 text-white ">
         <div class="text-white">
@@ -11,19 +11,19 @@ templ MainPage() {
             <div class='grid grid-cols-3 gap-x-2 gap-y-4 grid-flow-row-dense px-8'>
                 <div class='rounded-lg shadow-xl min-h-[100px] row-span-6 bg-cover bg-center'
                      style="background-image: url('./static/resources/uva3.jpeg'); ">
-                    <div class="p-6 font-bold text-2xl">Estação 1</div>
+                    <div class="p-6 font-bold text-2xl">Estação 3</div>
                     <div class="p-4 bg-cover bg-center">Temperaturas min med max</div>
                     <div class="p-4">Humidade relativa min med max</div>
                     <div class="p-4">Direção do vento </div>
                     <div class="p-4">Velociadade do vento </div>
                     <div class="p-4">Percepitiação </div>
                     <div class="p-4">Nº horas de folha molhada</div>
-
-                    <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-auto mr-2 mb-1"
-                    style="background-image: url('./static/icons/right-arrow-icon.png') ;cursor: pointer;"
+                    
+                    <div class="h-[100px] w-[100px] bg-no-repeat bg-center bg-contain ml-2 mb-1"
+                    style="background-image: url('./static/icons/left-arrow-icon.png'); cursor: pointer;"
                     hx-get="/api/v1/MetereologicalStationApp/estacao-b/interface"
                     hx-on="click" hx-target="main" hx-swap="outerHTML"></div>
-                    
+
                 </div>
 
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-2 bg-cover bg-center'
