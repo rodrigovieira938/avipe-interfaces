@@ -12,7 +12,6 @@ func main() {
 	
 
 	apps := []app.Application{
-		applications.CreateExampleApp(),
 		applications.CreateMetereologicalStationApp(),
 	}
 
