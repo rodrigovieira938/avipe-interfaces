@@ -20,13 +20,13 @@ func (app *MetereologicalStationApp) Name() string {
 }
 
 type DadosEstacao struct {
-    EstacaoID    int     `json:"id"`
-    Temperatura  float64 `json:"temperatura"`
-    Precipitacao float64 `json:"precipitacao"`
-    Folha        float64 `json:"folha"`
-    Vento        float64 `json:"vento"`
-    Direcao      string  `json:"direcao"`
-    Humidade     float64 `json:"humidade"`
+	EstacaoID    int     `json:"id"`
+	Temperatura  float64 `json:"temperatura"`
+	Precipitacao float64 `json:"precipitacao"`
+	Folha        float64 `json:"folha"`
+	Vento        float64 `json:"vento"`
+	Direcao      string  `json:"direcao"`
+	Humidade     float64 `json:"humidade"`
 }
 
 var Dados = [3]DadosEstacao{
@@ -36,9 +36,9 @@ var Dados = [3]DadosEstacao{
 }
 
 var estacaoNome = [3]string{
-	"Estação 1",
-	"Estação 2",
-	"Estação 3",
+	"Azeitao",
+	"Faias",
+	"Algeruz",
 }
 
 func NomeEstacao(ID int) string {

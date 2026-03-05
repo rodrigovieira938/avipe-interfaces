@@ -47,43 +47,55 @@ templ MainPage(d DadosEstacao) {
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-1 md:col-span-2 bg-cover bg-center'
                      style="background-image: url('./static/resources/montanhas.jpeg');">
                     <div class="text-center font-bold text-sm md:text-base">TEMPERATURAS</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/temperatura.png');">{ fmt.Sprintf("%.1f °C", d.Temperatura) }
-                     </div>
+                    <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ fmt.Sprintf("%.1f °C", d.Temperatura) }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/temperatura.png');"></div>
+                    </div>
                 </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
                      style="background-image: url('./static/resources/chuva.jpeg');">
                      <div class="text-center font-bold text-sm md:text-base">PRECIPITAÇÃO</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/chuva.png');">{ fmt.Sprintf("%.1f mm", d.Precipitacao) }
+                     <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ fmt.Sprintf("%.1f mm", d.Precipitacao) }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/chuva.png');"></div>
                      </div>
                 </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[110px] bg-cover bg-center'
                      style="background-image: url('./static/resources/folha_molhada.jpeg');">
                      <div class="text-center font-bold text-sm md:text-base">FOLHA MOLHADA</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/folha.png');">{ fmt.Sprintf("%.1f h", d.Folha) }
+                     <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ fmt.Sprintf("%.1f h", d.Folha) }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/folha.png');"></div>
                      </div>
                 </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
                      style="background-image: url('./static/resources/vento.jpeg');">
                      <div class="text-center font-bold text-sm md:text-base">VELOCIDADE DO VENTO</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/vento.png');">{ fmt.Sprintf("%.1f km/h", d.Vento) }
+                     <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ fmt.Sprintf("%.1f km/h", d.Vento) }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/vento.png');"></div>
                      </div>
                 </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[150px] row-span-3 bg-cover bg-center'
                      style="background-image: url('./static/resources/direcao_vento.jpeg');">
                      <div class="text-center font-bold text-sm md:text-base">DIREÇÃO DO VENTO</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/direcao.png');">{ d.Direcao }
+                     <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ d.Direcao }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/direcao.png');"></div>
                      </div>
                 </div>
                 <div class='bg-slate-600 rounded-lg shadow-xl min-h-[100px] col-span-1 md:col-span-2 bg-cover bg-center'
                      style="background-image: url('./static/resources/precipitacao.jpeg');">
                      <div class="text-center font-bold text-sm md:text-base">HUMIDADE RELATIVA</div>
-                      <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain ml-auto"
-                      style=" background-image: url('./static/icons/humidade.png');">{ fmt.Sprintf("%.1f %%", d.Humidade) }
+                     <div class="flex justify-between items-center px-4">
+                        <div class="font-bold text-2xl md:text-2xl">{ fmt.Sprintf("%.1f %%", d.Humidade) }</div>
+                        <div class="h-[80px] w-[80px] md:h-[100px] md:w-[100px] bg-no-repeat bg-center bg-contain"
+                        style=" background-image: url('./static/icons/humidade.png');"></div>
                      </div>
                 </div>
             </div>
