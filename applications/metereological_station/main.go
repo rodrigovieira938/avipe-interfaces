@@ -27,6 +27,8 @@ type DadosEstacao struct {
     Vento        float64 `json:"vento"`
     Direcao      string  `json:"direcao"`
     Humidade     float64 `json:"humidade"`
+	Observacao1 string `json:"observacao1"`
+	Observacao2 string `json:"observacao2"`
 }
 
 var Dados = [3]DadosEstacao{
@@ -36,9 +38,9 @@ var Dados = [3]DadosEstacao{
 }
 
 var estacaoNome = [3]string{
-	"Estação 1",
-	"Estação 2",
-	"Estação 3",
+	"Estação Azeitão",
+	"Estação Faias",
+	"Estação Algeruz",
 }
 
 func NomeEstacao(ID int) string {
